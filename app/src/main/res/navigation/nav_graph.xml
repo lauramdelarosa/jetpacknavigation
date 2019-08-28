@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/fragmentBasicos">
+
+    <fragment android:id="@+id/fragmentBasicos"
+              android:name="com.example.fragmentdesign.FragmentBasicos"
+              android:label="fragmentBasicos"
+              tools:layout="@layout/basicos_fragment">
+
+        <action android:id="@+id/fragmentBasicos_to_fragmentIngresos"
+                app:destination="@id/fragmentIngresos"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentAprobacion"
+              android:name="com.example.fragmentdesign.FragmentAprobacion"
+              android:label="fragmentAprobacion"
+              tools:layout="@layout/aprobacion_fragment">
+
+
+        <action android:id="@+id/fragmentAprobacion_to_fragmentIngresos"
+                app:destination="@id/fragmentIngresos"/>
+
+
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentIngresos"
+              android:name="com.example.fragmentdesign.FragmentIngresos"
+              android:label="fragmentIngresos"
+              tools:layout="@layout/ingresos_fragment">
+
+        <action android:id="@+id/fragmentIngresos_to_fragmentBasicos"
+                app:destination="@id/fragmentBasicos"/>
+
+        <action android:id="@+id/fragmentIngresos_to_fragmentAprobacion"
+                app:destination="@id/fragmentAprobacion"/>
+
+    </fragment>
+
+
+</navigation>
